@@ -59,8 +59,8 @@ export function Navegacao({ children }: { children: ReactNode }) {
   if (!ferramentas.some(({ href }) => href === caminho)) return children;
 
   return (
-    <div className="min-h-screen lg:grid lg:grid-cols-[15rem_minmax(0,1fr)]">
-      <aside className="sticky top-0 hidden h-screen flex-col gap-10 border-r border-white/10 bg-juridico-dark px-5 py-7 text-white lg:flex">
+    <div className="app-shell">
+      <aside className="app-sidebar flex-col gap-10 border-r border-white/10 bg-juridico-dark px-5 py-7 text-white">
         <Link href="/" className="flex items-center gap-3 px-1">
           <span aria-hidden="true" className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-bronze-claro font-editorial text-2xl text-juridico-dark">G</span>
           <span className="font-editorial text-lg leading-tight">Gestão Jurídica</span>
@@ -71,8 +71,8 @@ export function Navegacao({ children }: { children: ReactNode }) {
         <Sair />
       </aside>
 
-      <div className="min-w-0">
-        <header className="sticky top-0 z-10 flex items-center gap-3 border-b border-white/10 bg-juridico-dark px-5 py-3 text-white lg:hidden">
+      <div className="app-content">
+        <header className="app-mobile-header sticky top-0 z-10 items-center gap-3 border-b border-white/10 bg-juridico-dark px-5 py-3 text-white">
           <button type="button" aria-haspopup="dialog" onClick={() => dialogo.current?.showModal()}
             className="rounded-lg border border-white/40 px-3 py-2 text-sm font-medium hover:bg-white/10">Menu</button>
           <Link href="/" className="font-editorial text-lg">Gestão Jurídica</Link>

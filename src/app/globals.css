@@ -35,3 +35,46 @@ button {
   outline: 2px solid var(--color-destaque);
   outline-offset: 3px;
 }
+
+.app-shell {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-sidebar {
+  display: none;
+}
+
+.app-content {
+  min-width: 0;
+  width: 100%;
+}
+
+.app-mobile-header {
+  display: flex;
+}
+
+@media (min-width: 64rem) {
+  .app-shell {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    grid-template-areas: "sidebar content";
+  }
+
+  .app-sidebar {
+    grid-area: sidebar;
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    min-width: 0;
+  }
+
+  .app-content {
+    grid-area: content;
+  }
+
+  .app-mobile-header {
+    display: none;
+  }
+}
