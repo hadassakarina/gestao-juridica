@@ -1,0 +1,37 @@
+
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-dm-sans);
+  --font-editorial: var(--font-fraunces);
+
+  --color-juridico: #33312f;
+  --color-juridico-dark: #22211f;
+  --color-bronze-claro: #dbc5a5;
+  --color-destaque: #795c36;
+  --color-fundo: #f5f3ef;
+  --color-ink: #292724;
+  --color-texto-suave: #686159;
+  --color-divisoria: #e2dcd3;
+  --color-campo: #b9b0a4;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fundo);
+  color: var(--color-ink);
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-destaque);
+  outline-offset: 3px;
+}
